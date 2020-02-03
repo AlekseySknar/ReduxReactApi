@@ -9,7 +9,7 @@ const initialState = {
   }
 };
 
-const userReducer = function(state = initialState, action) {
+const phoneReducer = function(state = initialState, action) {
   switch (action.type) {
     case types.GET_PHONES_SUCCESS:
       return Object.assign({}, state, { users: action.phones });
@@ -17,7 +17,7 @@ const userReducer = function(state = initialState, action) {
     case types.DELETE_PHONES_SUCCESS:
       // Use lodash to create a new user array without the user we want to remove
       const newUsers = _.filter(
-        state.phone,
+        state.phones,
         phone => phone.id != action.phoneId
       );
       return Object.assign({}, state, { users: newUsers });
@@ -29,4 +29,4 @@ const userReducer = function(state = initialState, action) {
   return state;
 };
 
-export default userReducer;
+export default phoneReducer;

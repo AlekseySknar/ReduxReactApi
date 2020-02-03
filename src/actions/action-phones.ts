@@ -14,7 +14,7 @@ export function deleteUserSuccess(phoneId) {
   };
 }
 
-export function userProfileSuccess(phoneProfile) {
+export function addNewPhone(phoneProfile) {
   return {
     type: types.ADD_PHONES_SUCCESS,
     phoneProfile
