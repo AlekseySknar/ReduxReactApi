@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import Box from "@material-ui/core";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -15,13 +15,34 @@ class PhoneAdded extends React.Component {
               <h1>Добавить телефон</h1>
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField id="standard-basic" label="Марка" fullWidth={true} />
+              <TextField
+                id="standard-basic"
+                label="Марка"
+                fullWidth={true}
+                value={this.props.phoneValue}
+                onChange={this.props.handleChangePhone}
+              />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <TextField id="standard-basic" label="Модель" fullWidth={true} />
+              <TextField
+                id="standard-basic"
+                label="Модель"
+                fullWidth={true}
+                value={this.props.modelValue}
+                onChange={this.props.handleChangeModel}
+              />
             </Grid>
             <Grid item xs={12}>
-              <Button variant="contained" fullWidth={true}>
+              <Button
+                variant="contained"
+                fullWidth={true}
+                onClick={() =>
+                  this.props.handleClick({
+                    phone: "tst",
+                    model: "lol"
+                  })
+                }
+              >
                 Добавить телефон
               </Button>
             </Grid>

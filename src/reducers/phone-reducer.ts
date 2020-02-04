@@ -4,8 +4,8 @@ import _ from "lodash";
 const initialState = {
   phones: [],
   phoneProfile: {
-    phone: "",
-    model: ""
+    phone: "Meizu",
+    model: "Herna"
   }
 };
 
@@ -23,7 +23,8 @@ const phoneReducer = function(state = initialState, action) {
       return Object.assign({}, state, { users: newUsers });
 
     case types.ADD_PHONES_SUCCESS:
-      return Object.assign({}, state, { phoneProfile: action.userProfile });
+      console.log(state.phoneProfile);
+      return Object.assign({}, state, { phoneProfile: action.phoneProfile });
   }
 
   return state;
