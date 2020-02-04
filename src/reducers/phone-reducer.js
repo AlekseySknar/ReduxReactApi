@@ -23,13 +23,9 @@ const phoneReducer = function(state = initialState, action) {
       return Object.assign({}, state, { users: newUsers });
 
     case types.ADD_PHONES_SUCCESS:
-      var newPhones = [];
-      newPhones.push(action.phoneProfile);
-      console.log(state.phones);
-      console.log(action.phoneProfile);
-      console.log(newPhones);
+      //Просто добавляем новый телефон в список
       return Object.assign({}, state, {
-        phones: state.phones.concat(newPhones)
+        phones: state.phones.concat(action.phoneProfile)
       });
 
     default:
