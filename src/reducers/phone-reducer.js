@@ -23,14 +23,18 @@ const phoneReducer = function(state = initialState, action) {
       return Object.assign({}, state, { users: newUsers });
 
     case types.ADD_PHONES_SUCCESS:
-      const newPhones = state.phones + action.phoneProfile;
+      var newPhones = [];
+      newPhones.push(action.phoneProfile);
       console.log(state.phones);
-      console.log(newPhones[0]);
       console.log(action.phoneProfile);
-      return Object.assign({}, state, { phones: newPhones });
-  }
+      console.log(newPhones);
+      return Object.assign({}, state, {
+        phones: state.phones.concat(newPhones)
+      });
 
-  return state;
+    default:
+      return state;
+  }
 };
 
 export default phoneReducer;
