@@ -36,12 +36,7 @@ class PhoneAdded extends React.Component {
               <Button
                 variant="contained"
                 fullWidth={true}
-                onClick={() =>
-                  this.props.handleClick({
-                    phone: "tst",
-                    model: "lol"
-                  })
-                }
+                onClick={this.props.handleClick}
               >
                 Добавить телефон
               </Button>

@@ -13,11 +13,10 @@ class PhoneAddedRedux extends Component {
     this.handleChangePhone = this.handleChangePhone.bind(this);
   }
 
-  handleClick(phon) {
+  handleClick() {
     store.dispatch(
       addNewPhone({ phone: this.state.phone, model: this.state.model })
     );
-    console.log(phon);
   }
 
   handleChangePhone(event) {
