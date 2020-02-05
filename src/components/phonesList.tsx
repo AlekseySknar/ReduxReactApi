@@ -10,29 +10,31 @@ import Button from "@material-ui/core/Button";
 
 function phonesList(phones = []) {
   return phones.map((value, index) => (
-    <Grid container spacing={1}>
-      <Grid item xs={5} key={index}>
-        <TextField
-          id="standard-basic"
-          label={value.phone}
-          fullWidth={true}
-          disabled
-        />
+    <div key={index}>
+      <Grid container spacing={1}>
+        <Grid item xs={5}>
+          <TextField
+            id="standard-basic"
+            label={value.phone}
+            fullWidth={true}
+            disabled
+          />
+        </Grid>
+        <Grid item xs={5}>
+          <TextField
+            id="standard-basic"
+            label={value.model}
+            fullWidth={true}
+            disabled
+          />
+        </Grid>
+        <Grid item xs={2}>
+          <Button variant="contained" fullWidth={true}>
+            Уд.
+          </Button>
+        </Grid>
       </Grid>
-      <Grid item xs={5} key={index}>
-        <TextField
-          id="standard-basic"
-          label={value.model}
-          fullWidth={true}
-          disabled
-        />
-      </Grid>
-      <Grid item xs={2} key={index}>
-        <Button variant="contained" fullWidth={true}>
-          Уд.
-        </Button>
-      </Grid>
-    </Grid>
+    </div>
   ));
 }
 
