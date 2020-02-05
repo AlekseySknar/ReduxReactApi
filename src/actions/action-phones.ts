@@ -1,13 +1,13 @@
 import * as types from "../actions/action-types";
 
-export function getUsersSuccess(phones) {
+export function getPhoneSuccess(phones) {
   return {
     type: types.GET_PHONES_SUCCESS,
     phones
   };
 }
 
-export function deleteUserSuccess(phoneId) {
+export function deletePhoneSuccess(phoneId) {
   return {
     type: types.DELETE_PHONES_SUCCESS,
     phoneId

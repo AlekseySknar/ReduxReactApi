@@ -16,11 +16,11 @@ const phoneReducer = function(state = initialState, action) {
 
     case types.DELETE_PHONES_SUCCESS:
       // Use lodash to create a new user array without the user we want to remove
-      const newUsers = _.filter(
+      const newPhones = _.filter(
         state.phones,
-        phone => phone.id != action.phoneId
+        phone => phone.id !== action.phoneId
       );
-      return Object.assign({}, state, { users: newUsers });
+      return Object.assign({}, state, { phones: newPhones });
 
     case types.ADD_PHONES_SUCCESS:
       //Просто добавляем новый телефон в список
