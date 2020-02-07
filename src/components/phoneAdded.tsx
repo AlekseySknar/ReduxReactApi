@@ -16,7 +16,6 @@ class PhoneAdded extends React.Component {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
-                id="standard-basic"
                 label="Марка"
                 fullWidth={true}
                 value={this.props.phoneValue}
@@ -25,7 +24,6 @@ class PhoneAdded extends React.Component {
             </Grid>
             <Grid item xs={12} sm={6}>
               <TextField
-                id="standard-basic"
                 label="Модель"
                 fullWidth={true}
                 value={this.props.modelValue}

@@ -20,3 +20,10 @@ export function addNewPhone(phoneProfile) {
     phoneProfile
   };
 }
+
+export function CHANGE_PHONE_PROFILE_SUCCESS(phoneProfile) {
+  return {
+    type: types.CHANGE_PHONE_PROFILE_SUCCESS,
+    phoneProfile
+  };
+}
