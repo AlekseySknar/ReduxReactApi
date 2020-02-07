@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import PhonesList from "./phonesList";
-import { deletePhoneSuccess } from "../actions/action-phones";
-import store from "../store";
+import PhonesList from "../views/phones-list";
+import { deletePhoneSuccess } from "../../actions/action-phones";
+import store from "../../store";
 
 class PhoneListRedux extends Component {
   constructor(props) {

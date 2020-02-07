@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import { connect } from "react-redux";
-import PhoneAdded from "./phoneAdded";
-import { addNewPhone } from "../actions/action-phones";
-import store from "../store";
+import PhoneAdded from "../views/phone-added";
+import { addNewPhone } from "../../actions/action-phones";
+import store from "../../store";
 
 class PhoneAddedRedux extends Component {
   constructor(props) {
@@ -39,13 +38,5 @@ class PhoneAddedRedux extends Component {
     );
   }
 }
-
-/*const mapStateToProps = function(store) {
-  return {
-    phoneProfile: store.phoneState.phoneProfile
-  };
-};
-
-export default connect(mapStateToProps)(PhoneAddedRedux); */
 
 export default PhoneAddedRedux;

@@ -1,7 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
-import PhonesListRedux from "./phonesListRedux";
-import PhoneAddedRedux from "./phoneAddedRedux";
+import PhonesListRedux from "./phones-list-container";
+import PhoneAddedRedux from "./phone-added-container";
 
 class MainContainer extends React.Component {
   render() {
